@@ -43,7 +43,8 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v3
         with:
-          path: artifacts
+          name: artifacts-${{ runner.os }}-binary
+          path: target/release/
 
       - name: Create Release
         id: create_release
